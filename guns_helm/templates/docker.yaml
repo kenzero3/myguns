@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJyZWdpc3RyeS5jbi1zaGFuZ2hhaS5hbGl5dW5jcy5jb20iOnsidXNlcm5hbWUiOiJzYW5iaWFuc2hlbiIsInBhc3N3b3JkIjoiYTEyMzQ1NkFhIiwiYXV0aCI6ImMyRnVZbWxoYm5Ob1pXNDZZVEV5TXpRMU5rRmgifX19
+kind: Secret
+metadata:
+  name: guns-secret
+  labels:
+    {{- include "guns.labels" . | nindent 4 }}
+type: kubernetes.io/dockerconfigjson
